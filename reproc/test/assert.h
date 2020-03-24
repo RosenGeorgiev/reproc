@@ -19,6 +19,6 @@
                                                                                \
       fflush(stderr);                                                          \
                                                                                \
-      exit(EXIT_FAILURE);                                                      \
+      abort();                                                                 \
     }                                                                          \
   } while (0)

@@ -25,7 +25,7 @@ int main(void)
   ASSERT(output != NULL);
 
   r = reproc_wait(process, REPROC_INFINITE);
-  ASSERT(r == 0);
+  ASSERT(r == 1);
 
   const char *current = output;
 
