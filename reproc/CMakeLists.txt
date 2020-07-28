@@ -1,4 +1,4 @@
-if(WIN32)
+if(WIN32 OR MSYS OR MINGW)
   set(REPROC_WINSOCK_LIBRARY ws2_32)
 endif()
 
@@ -9,7 +9,7 @@ if(REPROC_MULTITHREADED)
   target_link_libraries(reproc PRIVATE Threads::Threads)
 endif()
 
-if(WIN32)
+if(WIN32 OR MSYS OR MINGW)
   set(PLATFORM windows)
   target_compile_definitions(reproc PRIVATE WIN32_LEAN_AND_MEAN)
   target_link_libraries(reproc PRIVATE ${REPROC_WINSOCK_LIBRARY})
